@@ -20,17 +20,19 @@ function TodoForm({addTodo}) {
         <div className="todoform">
             <h2>Criar tarefa:</h2>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Digite o título" 
+                <input className="form-control" type="text" placeholder="Digite o título" 
                 value={value}
                 onChange={(e) => setValue(e.target.value)}/>
-                <select value={category} 
+                <select className="form-control" value={category} 
                 onChange={(e) => setCategory(e.target.value)}>
                     <option value="">Selecione uma categoria</option>
                     <option value="Trabalho">Trabalho</option>
                     <option value="Pessoal">Pessoal</option>
                     <option value="Estudos">Estudos</option>
                 </select>
-                <button type="submit">Criar tarefa</button>
+                <div className="criar-tarefa">
+                <button className="btn btn-primary" type="submit">Criar tarefa</button>
+                </div>
             </form>
         </div>
     )
